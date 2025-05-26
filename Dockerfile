@@ -1,6 +1,8 @@
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/html/
+MKDIR /app
+
+COPY ..
 
 EXPOSE 80
 
