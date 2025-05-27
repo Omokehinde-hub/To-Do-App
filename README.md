@@ -1,19 +1,23 @@
 # Docker-To-Do-App: Your Simple Task Manager
 
+A straightforward and efficient web-based task management application designed to help you organize your daily tasks. With Docker-To-Do-App, you can easily add, complete, and remove tasks, all within a clean and intuitive interface. Your tasks are conveniently saved in your browser's local storage, ensuring they persist across sessions.
+
+
 ![Image](https://github.com/user-attachments/assets/13105e84-2a4b-4e6b-b1c7-408db0faaf06)
 
-A straightforward and efficient web-based task management application designed to help you organize your daily tasks. With Docker-To-Do-App, you can easily add, complete, and remove tasks, all within a clean and intuitive interface. Your tasks are conveniently saved in your browser's local storage, ensuring they persist across sessions.
+
 
 [![Docker CI](https://github.com/omokehinde-hub/To-Do-App/actions/workflows/workflow.yml/badge.svg)] 
 
 
 ## Features
 
--   **Effortless Task Creation:** Add new tasks quickly and easily using the input field and add button.  No complicated forms or unnecessary steps.
--   **One-Click Task Completion:** Mark tasks as complete with a single click on the associated checkbox. Completed tasks are visually distinguished, providing a clear overview of your progress.
--   **Quick Task Removal:** Remove tasks you no longer need with the click of a button. Keep your to-do list clean and focused.
--   **Persistent Data Storage:** Your tasks are automatically saved in your browser's local storage.  This means your to-do list will be there even after you close the browser or restart your computer.
--   **Dockerized Deployment:** Easily deployable using Docker, ensuring consistency across different environments.
+- **Effortless Task Creation**: Add new tasks quickly and easily using the input field and add button. No complicated forms or unnecessary steps.  
+- **One-Click Task Completion**: Mark tasks as complete with a single click on the associated checkbox. Completed tasks are visually distinguished, providing a clear overview of your progress.  
+- **Seamless Task Removal**: Delete tasks effortlessly by clicking the delete button next to each task. Keep your task list organized and clutter-free.  
+- **Persistent Data Storage**: Your tasks are saved in the browser's local storage, ensuring they remain available even after closing and reopening the browser.
+
+---
 
 ## How to Get Started
 
@@ -24,18 +28,22 @@ These instructions will guide you through setting up and running the Docker-To-D
     > Ensure you have all the necessary project files (`index.html`, `styles.css`, `app.js`, and `Dockerfile`) in the same directory.
 
 2.  **Build the Docker Image:**
-
+   
     Open your terminal, navigate to the directory containing the `Dockerfile`, and run the following command:
+  ```bash  
+   docker build -t nginx .
+   ```
 
-        > This command builds a Docker image named `todo-app` using the `Dockerfile` in the current directory (`.`).  The `-t` flag is used to tag the image with a name.
+This command builds a Docker image named `todo-app` using the `Dockerfile` in the current directory (`.`).  The `-t` flag is used to tag the image with a name.
 
 3.  **Run the Docker Container:**
 
     Run the container from the image you just created, exposing port 80 of the container to port 80 of your host machine:
+    ```bash
+    docker run -d -p 80:80 --name todo-app nginx
+     ```
 
-bash
-    docker run -d -p 80:80 todo-app
-        > This command runs the `todo-app` image in detached mode (`-d`), meaning the container will run in the background. The `-p 80:80` flag maps port 80 on your host machine to port 80 on the container.
+This command runs the `todo-app` image in detached mode (`-d`), meaning the container will run in the background. The `-p 80:80` flag maps port 80 on your host machine to port 80 on the container.
 
 4.  **Access the Application:**
 
