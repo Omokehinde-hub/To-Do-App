@@ -24,7 +24,7 @@ jobs:
       - name: Run Docker container
         run: |
           docker run -d -p 8080:80 --name nginx-container nginx-app:test
-          sleep 5  # wait for Nginx to fully start
+          sleep 5
 
       - name: Test application response
         run: |
