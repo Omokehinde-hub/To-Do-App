@@ -1,5 +1,7 @@
 # Docker-To-Do-App: Your Simple Task Manager
 
+![Image](https://github.com/user-attachments/assets/13105e84-2a4b-4e6b-b1c7-408db0faaf06)
+
 A straightforward and efficient web-based task management application designed to help you organize your daily tasks. With Docker-To-Do-App, you can easily add, complete, and remove tasks, all within a clean and intuitive interface. Your tasks are conveniently saved in your browser's local storage, ensuring they persist across sessions.
 - [![Docker CI](https://github.com/omokehinde-hub/To-Do-App/actions/workflows/docker-ci.yml/badge.svg)] 
 
